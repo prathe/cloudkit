@@ -25,7 +25,7 @@ EOD
 
   s.rubyforge_project = "cloudkit"
 
-  s.add_runtime_dependency 'rack', '~> 1.1'
+  s.add_runtime_dependency 'rack', '>= 1.1', '< 1.4'
   s.add_runtime_dependency 'uuid', '= 2.0.1'
   s.add_runtime_dependency 'oauth', '~> 0.3'
   s.add_runtime_dependency 'ruby-openid', '~> 2.1'
@@ -38,6 +38,7 @@ EOD
   s.add_development_dependency 'rake', '~>0.8.7'
   s.add_development_dependency 'rspec', '~> 2.2.0'
   s.add_development_dependency 'rack-test'
-  s.add_development_dependency 'ruby-debug'
+  s.add_development_dependency 'ruby-debug' if RUBY_VERSION < '1.9'
+  s.add_development_dependency 'ruby-debug19' if RUBY_VERSION >= '1.9'
 
 end

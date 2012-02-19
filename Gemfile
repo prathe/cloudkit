@@ -1,6 +1,6 @@
 source :gemcutter
 
-gemspec 'cloudkit'
+gemspec
 
 gem 'ruby-openid', '~> 2.1', :require => 'openid'
 
